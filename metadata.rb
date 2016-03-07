@@ -10,4 +10,4 @@ recipe "mjpg-streamer", "Set up the mjpg-streamer server"
 
 supports "ubuntu"
 
-recommends "runit"
+depends "runit"

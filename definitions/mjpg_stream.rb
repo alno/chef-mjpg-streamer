@@ -13,12 +13,13 @@ define :mjpg_stream, :name => nil, :variables => {} do
 
   runit_service params[:name] do
     cookbook 'mjpg-streamer'
-    template_name 'mjpg-stream'
+    run_template_name 'mjpg-stream'
+    log_template_name 'mjpg-stream'
 
     owner params[:owner]
     group params[:group]
 
-    run_restart true
+    restart_on_update true
 
     options(
       :input_options => input_options.join(' '),
