@@ -1,0 +1,4 @@
+#!/bin/bash
+
+exec 2>&1
+exec mjpg_streamer -i "/usr/local/lib/input_uvc.so <%= @options[:input_options] %>" -o "/usr/local/lib/output_http.so <%= @options[:output_options] %>"
