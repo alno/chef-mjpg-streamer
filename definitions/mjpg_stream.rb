@@ -22,8 +22,8 @@ define :mjpg_stream, :name => nil, :variables => {} do
     restart_on_update true
 
     options(
-      :input_options => input_options.join(' '),
-      :output_options => output_options.join(' ')
+      input_options: input_options.join(' '),
+      output_options: output_options.join(' ')
     )
   end
 end
