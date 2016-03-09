@@ -3,12 +3,10 @@ package "graphicsmagick"
 package "graphicsmagick-imagemagick-compat"
 
 case node['platform']
-  when "redhat","centos","scientific","fedora","suse","amazon"
-    package "libv4l-devel"
-    package "libjpeg-devel"
-  when "debian","ubuntu"
-    package "libv4l-dev"
-    package "libjpeg-dev"
+  when "redhat", "centos", "scientific", "fedora", "suse", "amazon"
+    package %w(libv4l-devel libjpeg-devel)
+  when "debian", "ubuntu"
+    package %w(libv4l-dev libjpeg-dev)
 end
 
 url = node[:mjpg_streamer][:checkout_url]
