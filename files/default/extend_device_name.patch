@@ -1,0 +1,17 @@
+Index: plugins/input_uvc/v4l2uvc.c
+===================================================================
+--- plugins/input_uvc/v4l2uvc.c	(revision 182)
++++ plugins/input_uvc/v4l2uvc.c	(working copy)
+@@ -66,10 +66,10 @@
+     vd->videodevice = NULL;
+     vd->status = NULL;
+     vd->pictName = NULL;
+-    vd->videodevice = (char *) calloc(1, 16 * sizeof(char));
++    vd->videodevice = (char *) calloc(1, 36 * sizeof(char));
+     vd->status = (char *) calloc(1, 100 * sizeof(char));
+     vd->pictName = (char *) calloc(1, 80 * sizeof(char));
+-    snprintf(vd->videodevice, 12, "%s", device);
++    snprintf(vd->videodevice, 32, "%s", device);
+     vd->toggleAvi = 0;
+     vd->getPict = 0;
+     vd->signalquit = 1;
