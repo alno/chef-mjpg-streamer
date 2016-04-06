@@ -1,6 +1,4 @@
-package "subversion"
-package "graphicsmagick"
-package "graphicsmagick-imagemagick-compat"
+package %w(subversion graphicsmagick graphicsmagick-imagemagick-compat)
 
 case node['platform']
   when "redhat", "centos", "scientific", "fedora", "suse", "amazon"
